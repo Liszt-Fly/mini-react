@@ -10,7 +10,7 @@ function createTextElement(text) {
 }
 
 
-function createElement(type, props, ...children) {
+export function createElement(type, props, ...children) {
     const vnode = {
         type,
         props: {
@@ -23,6 +23,7 @@ function createElement(type, props, ...children) {
 
 
 export function render(vnode, container) {
+
     const dom = vnode.type === "TEXT_ELEMENT" ? document.createTextNode("") : document.createElement(vnode.type)
 
     Object.keys(vnode.props).forEach(key => {
@@ -33,5 +34,10 @@ export function render(vnode, container) {
     vnode.props.children.forEach(child => {
         render(child, dom)
     })
+
     container.append(dom)
 }
+const React = {
+    render, createElement
+}
+export default React

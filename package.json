@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"vite": "^5.2.4"
+	},
+	"scripts": {
+		"dev": "pnpm vite"
+	}
+}

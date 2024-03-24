@@ -1,5 +1,4 @@
-import ReactDom from "./core/ReactDom.js"
-const App = createElement("div", { id: "app" }, "hi-", "mini-react")
-
+import ReactDom from "./core/ReactDom"
+import { App } from "./App"
 
 ReactDom.createRoot(document.querySelector("#root")).render(App)
